@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col">
+        <h2>Add a Task</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <textarea #tArea class="form-control" placeholder="add a task to do here" id="floatingTextarea"></textarea>
+        <button (click)="AddValue(tArea.value)" type="button" class="btn btn-light my-3">Submit</button>
+    </div>
+</div>

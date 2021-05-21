@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col">
+        <h2>Tasks</h2>
+        <h3 class='font-weight-light'>Click Task When Completed</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <ul>
+            <li *ngFor="let item of valueInMain; let i = index" (click)="remove(i)">{{item}}</li>
+        </ul>
+    </div>
+</div>
