@@ -6,10 +6,7 @@ import { Observable } from 'rxjs';
 })
 
 export class DataService implements OnInit {
-  private value: string[] = this.getFromLocalStorage('todo') ? this.getFromLocalStorage('todo') :
-    ['Your First Task: click me to mark as completed',
-      'Your Second Task: click a task from "Completed Tasks" to see it back here in Tasks',
-      'Your Third Task: mark this and the previous 2 tasks as complete and try to delete us'];
+  private value: string[] = this.getFromLocalStorage('todo') ? this.getFromLocalStorage('todo') : [];
   private completedValue: string[] = this.getFromLocalStorage('done') ? this.getFromLocalStorage('done') : [];
 
   constructor() { }
@@ -26,7 +23,7 @@ export class DataService implements OnInit {
     return this.completedValue;
   }
 
-  AddValue(entry: string): void {
+  AddtoLS(entry: string): void {
     this.value.push(entry);
     this.saveToLocalStorage('todo', this.value);
   }

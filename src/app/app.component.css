@@ -1,0 +1,23 @@
+.blueSubBG {
+    background-color: #118AB2;
+    height: 100vh;
+}
+
+.redSubBG {
+    background-color: #EF476F;
+    height: 100vh;
+}
+
+.greenSubBG {
+    background-color: #06D6A0;
+    height: 100vh;
+}
+
+.surroundBorder {
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+}
+
+body {
+    overflow: hidden;
+}

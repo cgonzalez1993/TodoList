@@ -1,0 +1,44 @@
+/* Background Colors */
+
+.blueSubBG {
+    background-color: #118AB2;
+}
+
+
+
+.redSubBG {
+    background-color: #EF476F;
+}
+
+.greenSubBG {
+    background-color: #06D6A0;
+}
+
+.yellowBG {
+    background-color: #FFD166;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Border Styling */
+
+.borderBottom {
+    border-bottom: 5px solid white;
+}
+
+.surroundBorder {
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.thiccFont {
+    font-weight: bold;
+    font-size: 80px;
+    color: #073B4C;
+    font-family: 'Ubuntu Mono', monospace;
+}

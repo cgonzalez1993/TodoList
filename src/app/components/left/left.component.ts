@@ -8,14 +8,16 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class LeftComponent implements OnInit {
 
+  taskValue: string[] = [];
+
   constructor(private dService: DataService) { }
 
   ngOnInit(): void {
-
+    this.taskValue = this.dService.GetValue();
   }
 
-  AddValue(value: string): void {
-    //we will call the data service
-    this.dService.AddValue(value);
+  remove(index: number): void {
+    console.log(index);
+    this.dService.Remove(index);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -8,17 +8,26 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CenterComponent implements OnInit {
 
-  valueInMain: string[] = [];
+  @ViewChild('text') inputText;
 
   constructor(private dService: DataService) { }
 
   ngOnInit(): void {
-    this.valueInMain = this.dService.GetValue();
+
   }
 
-  remove(index: number): void {
-    console.log(index);
-    this.dService.Remove(index);
+  AddtoLS(value: string): void {
+    if(this.inputText.nativeElement.value) {
+      this.dService.AddtoLS(value);
+      this.handleClear();
+    }
+    else {
+      alert("Please enter a task!!");
+    }
+  }
+
+  handleClear() {
+    this.inputText.nativeElement.value = '';
   }
 
 }

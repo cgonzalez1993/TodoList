@@ -1,18 +1,22 @@
-<div class="container-fluid">
-    <div class="row p-3 border-bottom border-light">
-        <div class="col-12">
-            <h1 class="text-center">To-Do List</h1>
-        </div>
+<div class="py-3 mb-2 yellowBG">
+    <div class="container-fluid borderBottom">
+        <h1 class="thiccFont center">To-Do List</h1>
     </div>
-    <div class="row h-75">
-        <div class="col-3 border-right border-light py-3">
-            <app-left></app-left>
-        </div>
-        <div class="col-6 py-3">
-            <app-center></app-center>
-        </div>
-        <div class="col-3 border-left border-light py-3">
-            <app-right></app-right>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4 blueSubBG">
+                    <app-left></app-left>
+                </div>
+                <div class="col-4 redSubBG surroundBorder">
+                    <app-center></app-center>
+                </div>
+                <div class="col-4 greenSubBG">
+                    <app-right></app-right>
+                </div>
+            </div>
         </div>
     </div>
 </div>

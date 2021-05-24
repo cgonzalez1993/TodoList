@@ -1,19 +1,19 @@
 <div class="row">
-    <div class="col">
-        <h2>Completed Tasks</h2>
-        <h3 class='font-weight-light'>Click Task If Not Completed</h3>
-    </div>
-</div>
-<div class="row">
     <div class="col-12">
-        <ul>
-            <li *ngFor="let item of completedList; let i = index" (click)="remove(i)"><s>{{item}}</s></li>
-        </ul>
+        <h2 class="mt-5 center">Completed Tasks</h2>
+        <h3 class="font-weight-light center">Click Task If Not Completed</h3>
+        <div class="col-12">
+            <div class="py-2" *ngFor="let item of completedList; let i = index" (click)="remove(i)">
+                <div class="box px-3 py-3" style="width: 100%;">{{item}}</div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row" *ngIf="completedList.length">
-    <div class="col-12">
-        <hr class='border border-light'>
-        <p (click)="removeAll()" class="pointer lead">Click Trash to Empty Completed Tasks 🗑️</p>
+    <div class="row" *ngIf="completedList.length">
+        <div class="col-12 mt-4 center">
+            <p class="text-center">Click The Flame To Incinerate Your Completed Tasks!!</p>
+        </div>
+        <div class="col-12">
+            <span class="pointer center" (click)="removeAll()">🔥</span>
+        </div>
     </div>
 </div>
