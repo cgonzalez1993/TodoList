@@ -43,3 +43,35 @@ h2 {
     color: white;
 }
 
+
+/* USING Wiggle from * WickedCSS v1.0 (https: //github.com/kristofferandreasen/wickedCSS) */
+
+.wiggle {
+    animation-iteration-count: infinite
+}
+
+.wiggle {
+    animation-name: wiggle;
+    -webkit-animation-name: wiggle;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: infinite
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-4deg)
+    }
+    50% {
+        transform: rotate(4deg)
+    }
+}
+
+@-webkit-keyframes wiggle {
+    0%, 100% {
+        -webkit-transform: rotate(-4deg)
+    }
+    50% {
+        -webkit-transform: rotate(4deg)
+    }
+}
