@@ -48,7 +48,10 @@
         border-left: 0;
         border-right: 0;
     }
-    .padding{
+    .padding {
         padding-bottom: 50px;
+    }
+    .blueSubBG{
+        min-height: 0;
     }
 }
